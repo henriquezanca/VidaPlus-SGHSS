@@ -4,17 +4,19 @@ import { middleware } from '#start/kernel'
 
 router
   .group(() => {
-    router.post('login', async ({ request, auth }) => {
-      const { email, password } = request.all()
-      const user = await User.verifyCredentials(email, password)
+    router
+      .post('login', async ({ request, auth }) => {
+        const { email, password } = request.all()
+        const user = await User.verifyCredentials(email, password)
 
-      // to generate a token
-      return await auth.use('jwt').generate(user)
-    })
+        // to generate a token
+        return await auth.use('jwt').generate(user)
+      })
+      .use(middleware.guest())
 
     router
       .group(() => {
-        router.get('/', async ({ auth }) => {
+        router.get('/me', async ({ auth }) => {
           return auth.getUserOrFail()
         })
       })

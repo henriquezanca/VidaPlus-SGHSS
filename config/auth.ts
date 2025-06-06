@@ -22,8 +22,6 @@ const authConfig = defineConfig({
     }),
     // add the jwt guard
     jwt: jwtGuard({
-      // tokenName is the name of the token passed as cookie, it can be optional, by default it is 'token'
-      tokenName: 'token',
       // tokenExpiresIn can be a string or a number, it can be optional
       tokenExpiresIn: '1h',
       // secret is the secret used to sign the token, it can be optional, by default it uses the application key
