@@ -37,7 +37,7 @@ PG_DB_NAME=adonis
 ``` bash
 node ace migration:run
 ```
-5**Execute o seed do banco de dados**: Após configurar o banco, execute o seeder de usuário ADMIN rodando:
+5. **Execute o seed do banco de dados**: Após configurar o banco, execute o seeder de usuário ADMIN rodando:
 ``` bash
 node ace db:seed
 ```
