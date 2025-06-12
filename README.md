@@ -9,38 +9,42 @@ Para executar este projeto, você precisa garantir que os seguintes requisitos e
 ## Instalação
 1. **Instale as dependências necessárias**:
 ``` bash
-   npm install
+npm install
 ```
 2. **Configure o banco de dados com Docker Compose**: No diretório `infra`, existe um arquivo `docker-compose.yml`, que contém as configurações necessárias para subir um banco de dados PostgreSQL. Para executá-lo, siga as etapas abaixo:
 
 - Primeiro, navegue até o diretório `infra`:
 ``` bash
-   cd infra
+cd infra
 ```
 - Em seguida, execute o comando para subir o container:
 ``` bash
-   docker-compose up -d
+docker-compose up -d
 ```
 Isso iniciará um container com o banco de dados PostgreSQL configurado e disponível para o projeto.
 3. **Configure as variáveis de ambiente**:
   - Duplique o arquivo `.env.example` na raiz do projeto e renomeie-o para `.env`.
   - O arquivo já contém as configurações padrão definidas na execução do container de Postgres:
 ``` env
-     DB_CONNECTION=pg
-     PG_HOST=localhost
-     PG_PORT=5432
-     PG_USER=postgres
-     PG_PASSWORD=postgres
-     PG_DB_NAME=adonis
+DB_CONNECTION=pg
+PG_HOST=localhost
+PG_PORT=5432
+PG_USER=postgres
+PG_PASSWORD=postgres
+PG_DB_NAME=adonis
 ```
 4. **Execute as migrações do banco de dados**: Após configurar o banco, aplique as migrações rodando:
 ``` bash
-   node ace migration:run
+node ace migration:run
+```
+5**Execute o seed do banco de dados**: Após configurar o banco, execute o seeder de usuário ADMIN rodando:
+``` bash
+node ace db:seed
 ```
 ## Executando o projeto
 1. **Inicie o servidor de desenvolvimento**:
 ``` bash
-   npm run dev
+npm run dev
 ```
 O servidor será iniciado por padrão em: `http://127.0.0.1:3333`.
 2. **Endpoints disponíveis**:
