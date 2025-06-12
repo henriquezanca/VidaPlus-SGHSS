@@ -1,6 +1,7 @@
 import router from '@adonisjs/core/services/router'
 import User from '#models/user'
 import { middleware } from '#start/kernel'
+const AppointmentsController = () => import('#controllers/appointments_controller')
 const PatientsController = () => import('#controllers/patients_controller')
 
 router
@@ -22,6 +23,7 @@ router
         })
 
         router.resource('patients', PatientsController).apiOnly()
+        router.resource('appointments', AppointmentsController).apiOnly()
       })
       .use(middleware.auth())
   })
