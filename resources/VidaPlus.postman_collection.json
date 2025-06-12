@@ -251,7 +251,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"admin@vidaplus.com.br\",\r\n    \"password\": \"secret\"\r\n}",
+					"raw": "{\r\n    \"email\": \"hzanca@vidaplus.com.br\",\r\n    \"password\": \"secret\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
