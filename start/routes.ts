@@ -22,8 +22,8 @@ router
           return auth.getUserOrFail()
         })
 
-        router.resource('patients', PatientsController).apiOnly()
-        router.resource('appointments', AppointmentsController).apiOnly()
+        router.resource('pacientes', PatientsController).apiOnly()
+        router.resource('consultas', AppointmentsController).apiOnly()
       })
       .use(middleware.auth())
   })

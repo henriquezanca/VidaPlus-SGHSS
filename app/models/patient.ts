@@ -11,10 +11,19 @@ export default class Patient extends BaseModel {
   declare appointments: HasMany<typeof Appointment>
 
   @column()
-  declare fullName: string
+  declare nome: string
+
+  @column()
+  declare cpf: string
+
+  @column()
+  declare email: string
+
+  @column()
+  declare telefone: string
 
   @column.date()
-  declare birthDate: DateTime
+  declare nascimento: DateTime
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

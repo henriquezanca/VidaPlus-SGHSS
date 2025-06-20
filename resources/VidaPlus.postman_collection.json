@@ -7,37 +7,37 @@
 	},
 	"item": [
 		{
-			"name": "Patients",
+			"name": "Pacientes",
 			"item": [
 				{
-					"name": "List patients",
+					"name": "Listar pacientes",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/patients",
+							"raw": "{{baseUrl}}/pacientes",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"patients"
+								"pacientes"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get patient",
+					"name": "Dados do paciente",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/patients/1",
+							"raw": "{{baseUrl}}/pacientes/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"patients",
+								"pacientes",
 								"1"
 							]
 						}
@@ -45,17 +45,17 @@
 					"response": []
 				},
 				{
-					"name": "Delete patient",
+					"name": "Remover paciente",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/patients/1",
+							"raw": "{{baseUrl}}/pacientes/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"patients",
+								"pacientes",
 								"1"
 							]
 						}
@@ -63,13 +63,13 @@
 					"response": []
 				},
 				{
-					"name": "Create patient",
+					"name": "Criar paciente",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fullName\": \"Paciente da Silva\",\r\n    \"birthDate\": \"2000-01-31\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Paciente da Silva\",\r\n    \"nascimento\": \"2000-01-31\",\r\n    \"cpf\": \"123.456.789-10\",\r\n    \"email\": \"paciente.da.silva@gmail.com\",\r\n    \"telefone\": \"(11) 1234-5678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -77,25 +77,25 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/patients",
+							"raw": "{{baseUrl}}/pacientes",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"patients"
+								"pacientes"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update patient",
+					"name": "Atualizar paciente",
 					"request": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fullName\": \"Outro Paciente da Silva\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Outro Paciente da Silva\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -103,12 +103,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/patients/1",
+							"raw": "{{baseUrl}}/pacientes/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"patients",
+								"pacientes",
 								"1"
 							]
 						}
@@ -118,37 +118,37 @@
 			]
 		},
 		{
-			"name": "Appointments",
+			"name": "Consultas",
 			"item": [
 				{
-					"name": "List appointments",
+					"name": "Listar consultas",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/appointments",
+							"raw": "{{baseUrl}}/consultas",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"appointments"
+								"consultas"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Get appointment",
+					"name": "Dados da consulta",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/appointments/1",
+							"raw": "{{baseUrl}}/consultas/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"appointments",
+								"consultas",
 								"1"
 							]
 						}
@@ -156,17 +156,17 @@
 					"response": []
 				},
 				{
-					"name": "Delete appointment",
+					"name": "Remover consulta",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/appointments/1",
+							"raw": "{{baseUrl}}/consultas/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"appointments",
+								"consultas",
 								"1"
 							]
 						}
@@ -174,13 +174,13 @@
 					"response": []
 				},
 				{
-					"name": "Create appointment",
+					"name": "Criar consulta",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"datetime\": \"2000-01-31 13:54:00\",\r\n    \"patient_id\": 1,\r\n    \"weight\": 80.0,\r\n    \"content\": \"Lorem ipsum dolor sit amet\"\r\n}",
+							"raw": "{\r\n    \"data_hora\": \"2000-01-31 13:54:00\",\r\n    \"patient_id\": 1,\r\n    \"peso\": 80.0,\r\n    \"observacoes\": \"Lorem ipsum dolor sit amet\",\r\n    \"motivo_consulta\": \"Doença\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -188,25 +188,25 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/appointments",
+							"raw": "{{baseUrl}}/consultas",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"appointments"
+								"consultas"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update appointment",
+					"name": "Atualizar consulta",
 					"request": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"content\": \"Outro conteúdo de teste\"\r\n}",
+							"raw": "{\r\n    \"observacoes\": \"Outra observação de teste\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -214,12 +214,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/appointments/1",
+							"raw": "{{baseUrl}}/consultas/1",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
-								"appointments",
+								"consultas",
 								"1"
 							]
 						}
@@ -271,7 +271,7 @@
 			"response": []
 		},
 		{
-			"name": "Get auth user data",
+			"name": "Dados do usuário autenticado",
 			"request": {
 				"method": "GET",
 				"header": [],

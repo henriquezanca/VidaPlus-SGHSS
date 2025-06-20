@@ -14,13 +14,16 @@ export default class Appointment extends BaseModel {
   declare patient: BelongsTo<typeof Patient>
 
   @column.date()
-  declare datetime: DateTime
+  declare dataHora: DateTime
 
   @column()
-  declare weight: number
+  declare peso: number
 
   @column()
-  declare content: string
+  declare motivoConsulta: string | null
+
+  @column()
+  declare observacoes: string | null
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

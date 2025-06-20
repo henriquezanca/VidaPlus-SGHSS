@@ -6,9 +6,10 @@ export default class extends BaseSchema {
   async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.datetime('datetime').notNullable()
-      table.float('weight').notNullable()
-      table.string('content').nullable()
+      table.datetime('data_hora').notNullable()
+      table.float('peso').notNullable()
+      table.string('motivo_consulta').nullable()
+      table.string('observacoes').nullable()
       table
         .integer('patient_id')
         .unsigned()
