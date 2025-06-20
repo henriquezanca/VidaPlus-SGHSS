@@ -49,11 +49,11 @@ npm run dev
 O servidor será iniciado por padrão em: `http://127.0.0.1:3333`.
 2. **Endpoints disponíveis**:
    Os endpoints estão organizados para realizar as operações de CRUD. Exemplos:
-  - **GET** `/patients` — Listar todos os pacientes
-  - **POST** `/patients` — Criar um novo paciente
-  - **GET** `/patients/:id` — Mostrar os dados de um paciente específico
-  - **PUT** `/patients/:id` — Atualizar os dados de um paciente
-  - **DELETE** `/patients/:id` — Excluir um paciente
+  - **GET** `/pacientes` — Listar todos os pacientes
+  - **POST** `/pacientes` — Criar um novo paciente
+  - **GET** `/pacientes/:id` — Mostrar os dados de um paciente específico
+  - **PUT** `/pacientes/:id` — Atualizar os dados de um paciente
+  - **DELETE** `/pacientes/:id` — Excluir um paciente
 
 *Todos os endpoints podem ser consultados na collection do Postman, disponível no diretório `resources` do projeto.
 
