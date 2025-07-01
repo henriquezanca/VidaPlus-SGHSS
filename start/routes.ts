@@ -11,7 +11,7 @@ router
         const { email, password } = request.all()
         const user = await User.verifyCredentials(email, password)
 
-        // to generate a token
+       
         return await auth.use('jwt').generate(user)
       })
       .use(middleware.guest())
